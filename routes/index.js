@@ -107,6 +107,13 @@ router.get('/design', function (req, res, next) {
 router.get('/scale', function (req, res, next) {
     res.render('site/scale');
 });
+router.get('*', function (req, res, next) {
+    res.render('site/404');
+});
+
+// router.get('*', (req, res)=>{
+//     res.render('404')
+// } )
 
 // router.get('/submit', function (req, res) {
 //     res.render('site/submit');
@@ -152,7 +159,7 @@ router.post("/email", function(req, res, next) {
         } else {
             res.status({ message: "Email sent!!!" });
         }
-    });
+    });         
 });
         //using mail gun
 

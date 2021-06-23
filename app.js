@@ -27,6 +27,13 @@ app.use(express.static(path.join(__dirname, 'public/assets')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+
+
+// app.get("*",(req, res) =>{
+//   res.send("404 found")
+// })
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -53,7 +60,6 @@ var url = "mongodb://localhost:27017/";
 // app.post('/', function(req,res){
 //   res.render('contact', {qs:req.query});
 // });
-
 
 
 
